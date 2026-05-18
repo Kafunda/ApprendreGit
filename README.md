@@ -107,7 +107,7 @@ git config --local user.email
 
     ```
 * **`git add`** : Elle permet d'indexer tes fichiers en les plaçant dans un espace temporaire appelé la **Staging Area** (zone de transit). Elle prépare tes fichiers avant de les valider définitivement dans le dépôt.
-    * *Exemple :* 
+    * *Exemple :* Creer un fichier index.html
     ```bash 
     git add index.html  
 
@@ -188,8 +188,15 @@ Pour effectuer une fusion, tu dois obligatoirement **te placer d'abord sur la br
     * *Exemple :* 
     ```bash
    git merge recherche
-   ```
 
+   ```
+* **`Supprimer une branche`** : lorsque la branche créee n'est plus utile, il faut la supprimer avec la commande **`git branch -d <nom_de_la_branche>`**.
+     * *Exemple :*
+```bash
+   git branch -d recherche
+
+   ```
+---
 ## Revenir sur les versions précédentes de votre projet
 
 Il se peut que vous ayez besoin de revenir en arrière pour retrouver une ancienne fonctionnalité de votre projet. Pas de panique, Git a tout prévu avec la commande `git reset`.
@@ -216,7 +223,38 @@ Le mode hard permet de revenir en arrière en supprimant définitivement tous le
 git reset --hard <ID_DU_COMMIT>
 
 ```
+---
+### Revenir sur la version fonctionnelle du code
+Lorsque des erreurs s'accumulent ou qu'un bug critique apparaît, il est nécessaire de comprendre ce qui s'est passé. Grâce aux outils de journalisation et d'historique de Git, vous pouvez analyser chaque modification, identifier l'origine d'un problème et savoir exactement qui a introduit un changement.
+* **`git log`** : La commande affiche la liste chronologique inversée des commits effectués sur la branche courante. Elle permet de voir l'auteur, la date et le message de chaque validation.
+```bash
+git log
 
+```
+Option recommandée : Afficher l'historique sous forme de graphique compact et lisible
+```bash
+git log --oneline --graph --decorate
+
+```
+
+* **`git reflog`** : donne la liste de toutes les actions et les commits effectués, y compris les commits supprimés, les changements de branche ou les resets annulés.
+```bash
+git reflog
+
+```
+* **`git blame`** : permet d'examiner un fichier ligne par ligne. Elle affiche pour chaque ligne le dernier commit qui l'a modifiée, la date du changement et le nom de l'auteur. C'est l'outil parfait pour comprendre le contexte d'une portion de code précise.
+```bash
+git blame
+
+```
+---
+### Fusionner un commit au commit precedent
+il se peut que vous ayez commis une erreur dans un commit avant qu'il ne soit pas un depot distant, comment le faire sans en creer un autre ?
+```bash
+git commit --amend --no-edit
+# --no-edit permet juste de ne pas modifier le message du commit
+
+```
 ---
 
 # 📖 Ressources utiles
