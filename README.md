@@ -48,3 +48,27 @@ Le projet suit cette démarche du moment où il est initialisé :
 | **Staging Area** <br>*(Zone d'indexation)* | `git add <nom_fichier>` | **Préparation :** Transfère tes fichiers modifiés depuis le *Working Directory* vers la *Staging Area* (zone de transit) pour préparer le prochain commit. |
 | **Dépôt Local (Repository)** <br>*(Coffre-fort)* | `git commit -m "Message"` | **Enregistrement :** Valide et fige les modifications de la *Staging Area* dans l'historique de ton dépôt local. |
 | **GitHub (Dépôt Distant)** <br>*(Le Cloud)* | `git push` | **Sauvegarde & Partage :** Envoie tous les commits de ton dépôt local vers ton dépôt distant sur GitHub. |
+
+### Utilisation des branches
+L'utilisation des branches est très importante car elle permet d'effectuer des modifications isolées sans affecter l'ensemble du projet (notamment la version stable en production).
+
+Une fois une branche créée, on peut y ajouter ou y modifier des fichiers. Chaque fichier au sein de l'espace de travail passe alors par différents états de gestion de version : 
+
+
+
+* **`Untracked`** (Non suivi) : Le fichier vient d'être créé. Le dépôt local ne suit pas encore ses modifications car il n'a jamais été indexé.
+* **`Staged`** (Indexé) : Le fichier a été ajouté avec `git add`. Il est marqué comme prêt à être inclus dans le prochain enregistrement.
+* **`Committed`** (Validé) : Le fichier est officiellement enregistré dans l'historique du dépôt local grâce à la commande `git commit`.
+
+---
+
+### Créer une branche
+Par défaut, Git crée une branche principale nommée **`main`** (ou parfois encore **`master`**). 
+
+
+
+Il est vivement conseillé de créer une branche distincte pour chaque nouvelle fonctionnalité ou correction de bug. Ainsi, en cas de problème, tu ne risques pas de casser tout le projet.
+
+* **`git branch <nom_de_la_branche>`** : Crée une nouvelle branche sans pour autant basculer dessus.
+  * *Exemple :* `git branch recherche` (crée une branche dédiée à une fonctionnalité de recherche).
+* **`git checkout <nom_de_la_branche>`** ou **`git switch <nom_de_la_branche>`** : Permet de basculer sur la branche que tu viens de créer pour commencer à y travailler.
