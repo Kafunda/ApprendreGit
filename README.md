@@ -106,6 +106,12 @@ git config --local user.email
     git init  
 
     ```
+* **`git status`** : Elle permet de verifier l'etat de votre dépôt, si il contient des fichiers ou non.
+cela permet de voir quels sont les fichiers qui doivent etre ajouter au dépôt.
+    ```bash 
+    git status 
+
+    ```
 * **`git add`** : Elle permet d'indexer tes fichiers en les plaçant dans un espace temporaire appelé la **Staging Area** (zone de transit). Elle prépare tes fichiers avant de les valider définitivement dans le dépôt.
     * *Exemple :* Creer un fichier index.html
     ```bash 
