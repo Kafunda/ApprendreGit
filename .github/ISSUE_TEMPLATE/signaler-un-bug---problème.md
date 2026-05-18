@@ -2,7 +2,7 @@
 name: Signaler un Bug / Problème
 about: Utilise ce formulaire si un exercice ne fonctionne pas ou si tu trouves une
   erreur dans le cours.
-title: ''
+title: 'BUG :'
 labels: ''
 assignees: ''
 
