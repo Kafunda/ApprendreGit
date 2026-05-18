@@ -2,7 +2,7 @@
 name: Poser une question sur le cours
 about: Tu as un blocage sur une notion théorique (Working Directory, Commits, etc.)
   ? Pose ta question ici !
-title: ''
+title: '[BUG] :'
 labels: ''
 assignees: ''
 
