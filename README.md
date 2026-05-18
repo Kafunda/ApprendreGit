@@ -153,7 +153,12 @@ Bonne chance !!!
 ### Créer et gérer une branche
 Par défaut, Git crée une branche principale nommée **`main`** (ou historiquement **`master`**). 
 
+* **`git branch `** : Affiche toutes les branches local du projet.
+  * *Exemple :* 
+  ```bash 
+    git branch
 
+    ```
 
 Il est vivement conseillé de créer une branche distincte pour chaque nouvelle fonctionnalité ou correction de bug. Ainsi, en cas de problème, tu ne risques pas de casser le projet principal.
 
