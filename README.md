@@ -103,13 +103,17 @@ git config --local user.email
 
 * **`git init`** : Cette commande initialise un nouveau dépôt Git dans ton dossier de projet (*Working Directory* ou Espace de travail). C'est elle qui dit à Git de commencer à surveiller ce dossier.
 * **`git add`** : Elle permet d'indexer tes fichiers en les plaçant dans un espace temporaire appelé la **Staging Area** (zone de transit). Elle prépare tes fichiers avant de les valider définitivement dans le dépôt.
-    * *Exemple :* `git add index.html` 
+    * *Exemple :* 
     ```bash 
     git add index.html  
 
     ```
 * **`git commit`** : Elle permet d'enregistrer définitivement tes fichiers indexés dans le dépôt local après validation, en créant un point dans l'historique (un snapshot).
-    * *Exemple :* `git commit -m "message sur la tache effectuer"`
+    * *Exemple :* 
+    ```bash 
+    git commit -m "message sur la tache effectuer"  
+
+    ```
 ---
 
 ### Cycle de vie d'un projet Git
@@ -139,13 +143,31 @@ Par défaut, Git crée une branche principale nommée **`main`** (ou historiquem
 Il est vivement conseillé de créer une branche distincte pour chaque nouvelle fonctionnalité ou correction de bug. Ainsi, en cas de problème, tu ne risques pas de casser le projet principal.
 
 * **`git branch <nom_de_la_branche>`** : Crée une nouvelle branche à partir de la branche où tu te trouves, sans pour autant basculer dessus.
-  * *Exemple :* `git branch recherche` (crée la branche dédiée à la fonctionnalité de recherche).
+  * *Exemple :* 
+  ```bash 
+    git branch recherche  
+
+    ```
+  (crée la branche dédiée à la fonctionnalité de recherche).
 * **`git checkout <nom_de_la_branche>`** ou **`git switch <nom_de_la_branche>`** : Permet de basculer sur la branche spécifiée pour commencer à y travailler.
-  * *Exemple :* `git switch recherche`
+  * *Exemple :* 
+  ```bash 
+    git checkout recherche
+    git switch recherche  
+
+    ```
 * **`git checkout -b <nom_de_la_branche>`** ou **`git switch -c <nom_de_la_branche>`** : Combine la création et le basculement immédiat sur la nouvelle branche en une seule commande. *(Attention : la syntaxe exacte est `git checkout -b` et non `git branch -b`)*.
-  * *Exemple :* `git checkout -b recherche`
+  * *Exemple :* 
+  ```bash 
+    git checkout -b recherche  
+
+    ```
 * **`git push -u origin <nom_de_la_branche>`** : Permet d'envoyer ta nouvelle branche locale pour la première fois vers le dépôt distant (GitHub) et de lier les deux. Les fois suivantes, un simple `git push` suffira.
-  * *Exemple :* `git push -u origin recherche`
+  * *Exemple :* 
+  ```bash 
+    git push -u origin recherche  
+
+    ```
 
 ---
 
@@ -157,8 +179,12 @@ Pour effectuer une fusion, tu dois obligatoirement **te placer d'abord sur la br
 1. Reviens sur la branche principale :
    ```bash
    git switch main
+   ```
 * **`git merge <nom_de_la_branche> `**
-    * *Exemple :* `git merge recherche`.
+    * *Exemple :* 
+    ```bash
+   git merge recherche
+   ```
 
 ## Revenir sur les versions précédentes de votre projet
 
