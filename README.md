@@ -50,29 +50,32 @@ Le projet suit cette démarche du moment où il est initialisé :
 | **Dépôt Local (Repository)** <br>*(Coffre-fort)* | `git commit -m "Message"` | **Enregistrement :** Valide et fige les modifications de la *Staging Area* dans l'historique de ton dépôt local. |
 | **GitHub (Dépôt Distant)** <br>*(Le Cloud)* | `git push` | **Sauvegarde & Partage :** Envoie tous les commits de ton dépôt local vers ton dépôt distant sur GitHub. |
 
-### Utilisation des branches
-L'utilisation des branches est très importante car elle permet d'effectuer des modifications isolées sans affecter l'ensemble du projet (notamment la version stable en production).
-
-Une fois une branche créée, on peut y ajouter ou y modifier des fichiers. Chaque fichier au sein de l'espace de travail passe alors par différents états de gestion de version : 
+### Créer et gérer une branche
+Par défaut, Git crée une branche principale nommée **`main`** (ou historiquement **`master`**). 
 
 
 
-* **`Untracked`** (Non suivi) : Le fichier vient d'être créé. Le dépôt local ne suit pas encore ses modifications car il n'a jamais été indexé.
-* **`Staged`** (Indexé) : Le fichier a été ajouté avec `git add`. Il est marqué comme prêt à être inclus dans le prochain enregistrement.
-* **`Committed`** (Validé) : Le fichier est officiellement enregistré dans l'historique du dépôt local grâce à la commande `git commit`.
+Il est vivement conseillé de créer une branche distincte pour chaque nouvelle fonctionnalité ou correction de bug. Ainsi, en cas de problème, tu ne risques pas de casser le projet principal.
+
+* **`git branch <nom_de_la_branche>`** : Crée une nouvelle branche à partir de la branche où tu te trouves, sans pour autant basculer dessus.
+  * *Exemple :* `git branch recherche` (crée la branche dédiée à la fonctionnalité de recherche).
+* **`git checkout <nom_de_la_branche>`** ou **`git switch <nom_de_la_branche>`** : Permet de basculer sur la branche spécifiée pour commencer à y travailler.
+  * *Exemple :* `git switch recherche`
+* **`git checkout -b <nom_de_la_branche>`** ou **`git switch -c <nom_de_la_branche>`** : Combine la création et le basculement immédiat sur la nouvelle branche en une seule commande. *(Attention : la syntaxe exacte est `git checkout -b` et non `git branch -b`)*.
+  * *Exemple :* `git checkout -b recherche`
+* **`git push -u origin <nom_de_la_branche>`** : Permet d'envoyer ta nouvelle branche locale pour la première fois vers le dépôt distant (GitHub) et de lier les deux. Les fois suivantes, un simple `git push` suffira.
+  * *Exemple :* `git push -u origin recherche`
 
 ---
 
-### Créer une branche
-Par défaut, Git crée une branche principale nommée **`main`** (ou parfois encore **`master`**). 
+### Fusionner une branche (Merge)
+Après avoir terminé le développement et validé tes modifications (via des commits) sur ta branche secondaire, il faut la fusionner avec la branche principale pour intégrer tes nouveautés au projet global.
 
+Pour effectuer une fusion, tu dois obligatoirement **te placer d'abord sur la branche qui va recevoir les modifications** (généralement `main`).
 
+1. Reviens sur la branche principale :
+   ```bash
+   git switch main
+* **`git merge <nom_de_la_branche> `**
+    * *Exemple :* `git merge recherche`.
 
-Il est vivement conseillé de créer une branche distincte pour chaque nouvelle fonctionnalité ou correction de bug. Ainsi, en cas de problème, tu ne risques pas de casser tout le projet.
-
-* **`git branch <nom_de_la_branche>`** : Crée une nouvelle branche sans pour autant basculer dessus.
-  * *Exemple :* `git branch recherche` (crée une branche dédiée à une fonctionnalité de recherche).
-* **`git checkout <nom_de_la_branche>`** ou **`git switch <nom_de_la_branche>`** : Permet de basculer sur la branche que tu viens de créer pour commencer à y travailler.
-    * *Exemple :* `git checkout recherche` 
-* **`git branch -b <nom_de_la_branche>`** : permet de creer une branche et d'y basculer directement.
-    * *Exemple :* `git branch -b recherche`
