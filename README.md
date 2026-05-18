@@ -26,8 +26,9 @@ Il existe deux types de dépôts :
 
 * **`git init`** : Cette commande initialise un nouveau dépôt Git dans ton dossier de projet (*Working Directory* ou Espace de travail). C'est elle qui dit à Git de commencer à surveiller ce dossier.
 * **`git add`** : Elle permet d'indexer tes fichiers en les plaçant dans un espace temporaire appelé la **Staging Area** (zone de transit). Elle prépare tes fichiers avant de les valider définitivement dans le dépôt.
+    * *Exemple :* `git add index.html` 
 * **`git commit`** : Elle permet d'enregistrer définitivement tes fichiers indexés dans le dépôt local après validation, en créant un point dans l'historique (un snapshot).
-
+    * *Exemple :* `git commit -m "message sur la tache effectuer"`
 ---
 
 ### Cycle de vie d'un projet Git
@@ -72,3 +73,6 @@ Il est vivement conseillé de créer une branche distincte pour chaque nouvelle 
 * **`git branch <nom_de_la_branche>`** : Crée une nouvelle branche sans pour autant basculer dessus.
   * *Exemple :* `git branch recherche` (crée une branche dédiée à une fonctionnalité de recherche).
 * **`git checkout <nom_de_la_branche>`** ou **`git switch <nom_de_la_branche>`** : Permet de basculer sur la branche que tu viens de créer pour commencer à y travailler.
+    * *Exemple :* `git checkout recherche` 
+* **`git branch -b <nom_de_la_branche>`** : permet de creer une branche et d'y basculer directement.
+    * *Exemple :* `git branch -b recherche`
