@@ -144,7 +144,12 @@ Le projet suit cette démarche du moment où il est initialisé :
 | **Staging Area** <br>*(Zone d'indexation)* | `git add <nom_fichier>` | **Préparation :** Transfère tes fichiers modifiés depuis le *Working Directory* vers la *Staging Area* (zone de transit) pour préparer le prochain commit. |
 | **Dépôt Local (Repository)** <br>*(Coffre-fort)* | `git commit -m "Message"` | **Enregistrement :** Valide et fige les modifications de la *Staging Area* dans l'historique de ton dépôt local. |
 | **GitHub (Dépôt Distant)** <br>*(Le Cloud)* | `git push` | **Sauvegarde & Partage :** Envoie tous les commits de ton dépôt local vers ton dépôt distant sur GitHub. |
-
+---
+### Exercice 1
+Excellent travail, il est temps d'aller tester et appliquer ce que vous avez appris jusqu'ici.
+Allez dans le dossier exercice et ouvrez le fichier **`exercice-1-commit.md`**.
+Bonne chance !!!
+---
 ### Créer et gérer une branche
 Par défaut, Git crée une branche principale nommée **`main`** (ou historiquement **`master`**). 
 
@@ -202,6 +207,13 @@ Pour effectuer une fusion, tu dois obligatoirement **te placer d'abord sur la br
    git branch -d recherche
 
    ```
+---
+
+### Exercice 2
+Felicitation à tous ceux qui sont arrivés jusqu'ici, il est temps d'aller tester et appliquer ce que vous avez appris dans le chapitre dedié aux branches.
+Allez dans le dossier exercice et ouvrez le fichier **`exercice-2-branches.md`**.
+Bonne chance !!!
+
 ---
 ## Revenir sur les versions précédentes de votre projet
 
