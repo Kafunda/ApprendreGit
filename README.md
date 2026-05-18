@@ -103,7 +103,9 @@ git config --local user.email
 
 * **`git init`** : Cette commande initialise un nouveau dépôt Git dans ton dossier de projet (*Working Directory* ou Espace de travail). C'est elle qui dit à Git de commencer à surveiller ce dossier.
 * **`git add`** : Elle permet d'indexer tes fichiers en les plaçant dans un espace temporaire appelé la **Staging Area** (zone de transit). Elle prépare tes fichiers avant de les valider définitivement dans le dépôt.
-    * *Exemple :* `git add index.html` ```bash git add index.html  
+    * *Exemple :* `git add index.html` ```bash 
+    git add index.html  
+    
     ```
 * **`git commit`** : Elle permet d'enregistrer définitivement tes fichiers indexés dans le dépôt local après validation, en créant un point dans l'historique (un snapshot).
     * *Exemple :* `git commit -m "message sur la tache effectuer"`
