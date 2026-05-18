@@ -1,6 +1,25 @@
 ## Formation : Apprendre les bases de Git et GitHub
 
-Dans cette formation, nous allons explorer les fondamentaux de Git et GitHub, deux outils incontournables pour tout développeur moderne.
+
+Bienvenue dans ce dépôt dédié à l’apprentissage des bases de Git et GitHub.  
+Ce guide est conçu pour les débutants qui souhaitent comprendre le fonctionnement du contrôle de version et apprendre à collaborer efficacement sur des projets de développement.
+
+---
+
+## 📚 Contenu de la formation
+
+Dans cette formation, vous apprendrez :
+
+- Comprendre la différence entre **Git** et **GitHub**
+- Installer et configurer Git
+- Créer et gérer un dépôt (*repository*)
+- Utiliser les commandes essentielles de Git
+- Comprendre le cycle de vie d’un projet Git
+- Créer et gérer des branches
+- Fusionner des branches avec `merge`
+- Envoyer un projet sur GitHub
+
+---
 
 ### 1. GitHub : Ton code dans le Cloud
 Vois GitHub comme une plateforme en ligne (un site web) qui héberge et stocke ton code source. Il permet de centraliser tes projets, de collaborer facilement en équipe et de partager ton travail avec le monde entier.
@@ -121,3 +140,41 @@ Pour effectuer une fusion, tu dois obligatoirement **te placer d'abord sur la br
 * **`git merge <nom_de_la_branche> `**
     * *Exemple :* `git merge recherche`.
 
+## Revenir sur les versions précédentes de votre projet
+
+Il se peut que vous ayez besoin de revenir en arrière pour retrouver une ancienne fonctionnalité de votre projet. Pas de panique, Git a tout prévu avec la commande `git reset`.
+
+Il existe 3 types de reset selon ce que vous souhaitez conserver ou annuler :
+
+### 1. Le mode Soft (`--soft`)
+Permet de revenir en arrière en annulant les commits, **sans supprimer aucun fichier ni aucune modification**. Vos changements récents sont conservés et placés directement dans la zone de staging (prêts à être commités à nouveau).
+```bash
+git reset --soft <ID_DU_COMMIT>
+
+```
+
+### 2. Le mode mixed (`--mixed`)
+C'est le comportement par défaut de Git si vous ne précisez rien. Il annule les commits et sort les modifications de la zone de staging. Vos fichiers restent inchangés sur votre disque dur, mais vos modifications récentes apparaissent comme "non suivies" (not staged).
+```bash
+git reset --mixed <ID_DU_COMMIT>
+
+```
+### 3. Le mode hard (`--hard`)
+Attention : Cette action est destructive et irréversible.
+Le mode hard permet de revenir en arrière en supprimant définitivement tous les fichiers et toutes les modifications créés après le commit cible. Votre projet revient exactement dans l'état où il était à ce moment-là.
+```bash
+git reset --hard <ID_DU_COMMIT>
+
+```
+
+---
+
+# 📖 Ressources utiles
+
+- Documentation officielle Git : https://git-scm.com/doc
+- Documentation GitHub Docs : https://docs.github.com
+- GitHub Skills : https://skills.github.com
+
+---
+
+⭐ N'hésitez pas à laisser une étoile au dépôt si ce guide vous aide !
