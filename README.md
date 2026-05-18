@@ -19,9 +19,51 @@ Il existe deux types de dépôts :
 * **Le dépôt public :** Tout le monde sur Internet peut voir ton code et s'en inspirer. Cependant, seules les personnes que tu auras désignées comme collaboratrices pourront modifier directement le projet. Les autres utilisateurs devront te proposer des suggestions de modifications (via ce qu'on appelle des *Pull Requests*). C'est la base du monde de l'Open Source.
 
 ---
+### Installer et configurer Git et Github
 
+# Configuration de Git et GitHub
+
+Ce guide rapide vous explique comment installer Git sur votre machine et configurer vos identifiants pour commencer à suivre vos projets avec GitHub.
+
+---
+
+## 1. Télécharger et installer Git
+
+1. Rendez-vous sur le site officiel [git-scm.com](https://git-scm.com/) pour télécharger le fichier d'installation adapté à votre système d'exploitation.
+2. Lancez l'assistant d'installation.
+
+> 💡 **Note importante :** Lors de l'installation, veillez à laisser cochée l'option qui propose d'ajouter Git aux **variables d'environnement** (généralement activée par défaut). Cela vous permettra d'utiliser les commandes Git depuis n'importe quel terminal.
+
+### Vérification de l'installation
+Une fois l'installation terminée, ouvrez un terminal :
+* **Sur Windows :** Appuyez sur les touches `Win + R`, tapez `cmd` ou `powershell`, puis validez.
+* **Sur macOS / Linux :** Ouvrez votre application Terminal.
+
+Entrez la commande suivante pour vérifier que Git est bien installé :
+```bash
+git --version
+
+```
+
+3. aller sur  sur www.Github.com et creer votre compte  
+   
+4. configurer l'utilisateur git : 
+il y a deux type de configuration, global et local
+* **`global`** : Ces identifiants s'appliqueront par défaut à tous vos projets sur votre machine. C'est l'option recommandée pour votre ordinateur personnel.
+**`git config --global user.name "votre nom"`**
+**`git config --global user.email "votre email"`**
+pour voir les infos de votre config : 
+**`git config --global user.name`**
+**`git config --global user.email`**
+* **`local`** : Cette configuration s'applique uniquement au projet courant (dans le dossier où vous vous trouvez). Elle est très utile si vous devez utiliser un compte professionnel pour certains projets et un compte personnel pour d'autres.
+**`git config --local user.name "Votre Nom Spécifique"`**
+**`git config --local user.email "votre.email.specifique@exemple.com"`**
+pour voir les infos de votre config : 
+**`git config --local user.name`**
+**`git config --local user.email`**
+
+---
 ### Les commandes de base
-
 
 
 * **`git init`** : Cette commande initialise un nouveau dépôt Git dans ton dossier de projet (*Working Directory* ou Espace de travail). C'est elle qui dit à Git de commencer à surveiller ce dossier.
