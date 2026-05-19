@@ -116,14 +116,63 @@ Ajout du paragraphe de bienvenue
 
 ---
 
-## 🔥 Bonus
+---
 
-1. Affichez l’historique des commits.
-2. Essayez la commande :
+# 🔥 Bonus avancé
+
+## 1. Vérifier l’historique des commits
+
+Affichez l’historique du projet avec :
 
 ```bash
-git log --oneline
+git log
 ```
 
+Puis essayez :
+
+```bash
+git log --oneline --graph --decorate
+```
+
+📌 Questions :
+- Quelle différence observez-vous entre les deux affichages ?
+- Quel affichage est le plus lisible ?
+
+---
+
+## 2. Modifier le dernier commit
+
+Ajoutez une nouvelle ligne dans `index.html` :
+
+```html
+<footer>Mon footer</footer>
+```
+
+Ajoutez le fichier dans le staging puis fusionnez les modifications avec le commit précédent sans créer un nouveau commit.
+
 📌 Question :
-- Quelle différence observez-vous avec `git log` ?
+- Quelle commande permet de modifier le dernier commit ?
+
+---
+
+## 3. Tester git reset
+
+Créez un nouveau fichier :
+
+```bash
+test.txt
+```
+
+Ajoutez-le dans le staging.
+
+Ensuite retirez-le du staging avec :
+
+```bash
+git reset
+```
+
+📌 Questions :
+- Le fichier a-t-il été supprimé ?
+- Que fait réellement `git reset` dans ce cas ?
+
+---

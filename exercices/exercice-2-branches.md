@@ -128,18 +128,73 @@ feature-navbar
 
 ---
 
-## 🔥 Bonus
+# 🔥 Bonus avancé
 
-1. Affichez l’historique sous forme graphique :
+## 1. Afficher toutes les branches
 
-```bash
-git log --oneline --graph --decorate
-```
+Affichez la liste des branches locales.
 
-2. Essayez de créer une deuxième branche nommée :
+📌 Question :
+- Quelle branche possède le symbole `*` ?
+
+---
+
+## 2. Créer une deuxième branche
+
+Créez une branche :
 
 ```bash
 feature-footer
 ```
 
-et ajoutez un footer au projet.
+Ajoutez dans `index.html` :
+
+```html
+<footer>Mon footer</footer>
+```
+
+Puis faites un commit.
+
+---
+
+## 3. Fusionner la branche
+
+Fusionnez `feature-footer` dans `main`.
+
+Ensuite affichez l’historique du projet :
+
+```bash
+git log --oneline --graph --decorate
+```
+
+📌 Question :
+- Voyez-vous les différents commits des branches ?
+
+---
+
+## 4. Tester git reflog
+
+Affichez l’historique complet des actions Git :
+
+```bash
+git reflog
+```
+
+📌 Question :
+- Quelle différence existe entre `git log` et `git reflog` ?
+
+---
+
+## 5. Supprimer une branche
+
+Supprimez :
+
+```bash
+feature-footer
+```
+
+📌 Question :
+- Pourquoi est-il conseillé de supprimer une branche inutile ?
+
+---
+
